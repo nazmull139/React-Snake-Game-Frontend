@@ -22,7 +22,7 @@ const SnakeGame = () => {
 
   const handleUpdateScore = async () => {
     try {
-      await updateHighScore({ userId: user?._id, highScore }).unwrap();
+      await updateHighScore({ userId: user?._id, highScore:highScore }).unwrap();
       console.log("High score updated in database:");
     } catch (error) {
       console.error("Failed to update high score in database:", error);
